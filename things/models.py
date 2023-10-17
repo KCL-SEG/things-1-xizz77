@@ -6,5 +6,5 @@ class Thing(models.Model):
   name = models.TextField(max_length=30,
                           unique=True, blank = False,)
   description = models.TextField(max_length=120, unique=False,blank=True)
-  quantity = models.IntegerField(max_length=3, validators=[MaxValueValidator(100), MinValueValidator(0)],unique=False,)
+  quantity = models.IntegerField(validators=[MaxValueValidator(100), MinValueValidator(0)],unique=False,)
   
